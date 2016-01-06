@@ -1,10 +1,10 @@
 Package.describe({
-  name: 'nobutakaoshiro:yahoo-tag-manager',
+  name: 'jhack:yahoo-tag-manager',
   version: '0.1.0',
   // Brief, one-line summary of the package.
-  summary: 'Install Yahoo! Tag Manager to Meteor',
+  summary: 'Yahoo! Tag Manager for Meteor',
   // URL to the Git repository containing the source code for this package.
-  git: 'https://github.com/nobutakaoshiro/meteor-yahoo-tag-manager.git',
+  git: 'https://github.com/j-hack/meteor-yahoo-tag-manager.git',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
@@ -12,19 +12,16 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use([
-    'browser-policy'
-  ]);
 
   api.addFiles([
-    'lib/client/yahoo_tag_manager.html',
-    'lib/client/yahoo_tag_manager.js',
-    'lib/client/body.html',
+    'lib/client/yahoo_tag_manager.js'
   ], 'client');
 
   api.addFiles([
     'lib/server/browser_policy.js'
   ], 'server');
+
+  api.export('YahooTagManager', 'client');
 });
 
 // Package.onTest(function(api) {
