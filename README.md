@@ -40,4 +40,4 @@ meteor run --settings settings.json
 
 # License
 
-MIT LICENSE
+MIT License
