@@ -37,3 +37,7 @@ if (Meteor.isClient) {
 ```bash
 meteor run --settings settings.json
 ```
+
+# License
+
+MIT LICENSE
